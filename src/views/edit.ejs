@@ -1,0 +1,30 @@
+<% include partials/_header%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset3-md-3">
+                <div class='card'>
+                    <div class="card-body">
+                        <form action='/edit/<%= task._id %>' method='POST'>
+                            <div class='form-group'>
+                                <input type='text' name='title'
+                                    placeholder="Inserte titulo"
+                                    value="<%= task.title %>"
+                                    class='form-control'>
+                            </div>
+                            <div class='form-group'>
+                                <textarea type='text'                                        name="description"
+                                    placeholder="Inserte una descripción"
+                                    cols='80' class='form-control'><%= task.description %>
+                                </textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark btn-block">
+                                Update
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include partials/_footer%>
